@@ -1,0 +1,22 @@
+<h1>Home</h1>
+<p>
+	Esta es la página principal
+</p>
+<input type="search" ng-model="buscador">
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Telefono</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="familiar in familia | filter:buscador" ng-click="setSelected(familiar)">
+			<td>{{familiar.Nombre}}</td>
+			<td>{{familiar.Apellido}}</td>
+			<td>{{familiar.Telefono}}</td>
+		</tr>
+	</tbody>
+
+</table>
